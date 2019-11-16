@@ -1,12 +1,10 @@
 
 var Crawler = require("crawler");
-const axios = require('axios');
 var parseString = require('xml2js').parseString;
-const queryString = require('query-string');
 const amqp = require('amqplib/callback_api');
 let url = [];
 let urlItems = [];
-let urlSubregions = [];
+let urlSubregions = []; 
 module.exports = (access) => {
     if (access == 'get') {
         return urlItems
