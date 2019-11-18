@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start":"node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,8 +14,7 @@
     "axios": "^0.16.2",
     "crawler": "^1.2.1",
     "cron": "^1.7.2",
+    "mssql": "^6.0.1",
     "xml2js": "^0.4.22"
-
-
   }
 }
