@@ -191,7 +191,6 @@ let start_crawler = async (pool,sql) => {
 
         setTimeout(() => {
             conn.close();
-            done();
 
         }, 60000)
     })
