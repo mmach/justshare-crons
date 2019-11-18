@@ -53,7 +53,7 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
 
 
 
-    }, null, true, null, null, true);
+    }, null, true);
 
 
     new CronJob('1 0 */3 * * *', async function () {
@@ -74,5 +74,5 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
             // ... error checks
         }
 
-    }, null, true, null, null, true);
+    }, null, true);
 })
