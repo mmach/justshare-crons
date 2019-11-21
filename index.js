@@ -12,7 +12,7 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
         console.log('Run integration');
         axios({
             method: 'post',
-            url: `https://justshare-api-justshare-main.e4ff.pro-eu-west-1.openshiftapps.com/command`,
+            url: `https://justshare-api-justshare.e4ff.pro-eu-west-1.openshiftapps.com/command`,
             data: {
                 "action": "syncItemCommand"
                 , "model": {}
