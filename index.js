@@ -32,7 +32,7 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
 
 
 
-    new CronJob('1 0 */10 * * *', async function () {
+    new CronJob('1 30 1 * * *', async function () {
 
         try {
             // make sure that any items are correctly URL encoded in the connection string
