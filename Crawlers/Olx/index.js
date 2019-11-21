@@ -79,7 +79,7 @@ let load_categories = (pool,sql) => {
                         done();
                         return
                     }
-                    const CONN_URL = 'amqp://kyqjanjv:6djuPiJWnpZnIMT1jZ-SvIULv8IOLw2P@hedgehog.rmq.cloudamqp.com/kyqjanjv';
+                    const CONN_URL = process.env.AMQP?process.env.AMQP:'amqp://kyqjanjv:6djuPiJWnpZnIMT1jZ-SvIULv8IOLw2P@hedgehog.rmq.cloudamqp.com/kyqjanjv';
                     let ch = null;
 
 
@@ -140,7 +140,7 @@ let load_categories = (pool,sql) => {
 
 
 let start_crawler = async (pool,sql) => {
-    const CONN_URL = 'amqp://kyqjanjv:6djuPiJWnpZnIMT1jZ-SvIULv8IOLw2P@hedgehog.rmq.cloudamqp.com/kyqjanjv';
+    const CONN_URL = process.env.AMQP?process.env.AMQP:'amqp://kyqjanjv:6djuPiJWnpZnIMT1jZ-SvIULv8IOLw2P@hedgehog.rmq.cloudamqp.com/kyqjanjv';
     let ch = null;
 
     const result_sitemap = await pool.query` SELECT * FROM Sitemap
