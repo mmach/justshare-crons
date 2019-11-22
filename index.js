@@ -56,7 +56,7 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
     }, null, true);
 
 
-    new CronJob('1 1 * * * *', async function () {
+    new CronJob('1 30 * * * *', async function () {
         try {
             // make sure that any items are correctly URL encoded in the connection string
             const result = await pool.query`select * from Integration WHERE IsActive=1`;
@@ -74,5 +74,5 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
             // ... error checks
         }
 
-    }, null, true,null,null,true);
+    }, null, true);
 })
