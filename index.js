@@ -4,8 +4,6 @@ var axios = require('axios');
 var olx = require('./Crawlers/Olx/index.js')
 const sql = require('mssql')
 
-sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-east-2.rds.amazonaws.com/IntegrationDB').then(pool => {
-
 
 
     new CronJob('1 */2 * * * *', function () {
@@ -31,7 +29,7 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
 
 
 
-
+/*
     new CronJob('1 30 1 * * *', async function () {
 
         try {
@@ -54,8 +52,8 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
 
 
     }, null, true);
-
-
+*/
+/*
     new CronJob('1 1 * * * *', async function () {
         try {
             // make sure that any items are correctly URL encoded in the connection string
@@ -75,4 +73,4 @@ sql.connect('mssql://admin:justshare123@justshare-integration.clrcukgqxhwe.us-ea
         }
 
     }, null, true);
-})
+*/
