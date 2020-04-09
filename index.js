@@ -6,26 +6,27 @@ const sql = require('mssql')
 
 
 
-    new CronJob('1 */2 * * * *', function () {
-        console.log('Run integration');
-        axios({
-            method: 'post',
-            url: `https://justshare-api-justshare.e4ff.pro-eu-west-1.openshiftapps.com/command`,
-            data: {
-                "action": "syncItemCommand"
-                , "model": {}
-            }
-        }).then(succ3 => {
-            console.log(" [x] RUN SYNC DONE");
+new CronJob('1 */2 * * * *', function () {
+    console.log('Run integration');
+    axios({
+        method: 'post',
+        url: `https://justshare-api-justshare.e4ff.pro-eu-west-1.openshiftapps.com/command`,
+        data: {
+            "action": "syncItemCommand"
+            , "model": {}
+        }
+    }).then(succ3 => {
+        console.log(succ3.data.length)
+        console.log(" [x] RUN SYNC DONE");
 
-        }, err3 => {
-            console.log(err3);
-        })
+    }, err3 => {
+        console.log(err3);
+    })
 
 
 
 
-    }, null, true, 'America/Los_Angeles');
+}, null, true, 'America/Los_Angeles');
 
 
 
